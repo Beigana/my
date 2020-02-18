@@ -17,7 +17,7 @@ public class active2 extends AppCompatActivity {
         mp3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 player= MediaPlayer.create(getApplicationContext(),R.raw.player);
+                 player= MediaPlayer.create(getApplicationContext(),R.raw.Nkusinza);
                 player.start();
             }
         });
