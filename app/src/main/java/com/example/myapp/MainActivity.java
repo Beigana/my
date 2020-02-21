@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     @Override
+    // \thsi sis a lifecycle method
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -22,8 +23,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sendMessage(View View) {
-        EditText message = (EditText)
-                findViewById(R.id.message);
+        EditText message =findViewById(R.id.message);
         Toast.makeText(this, "sending message" + message.getText().toString(),
                 Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, DisplayMessageActivity.class);

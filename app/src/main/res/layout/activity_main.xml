@@ -18,16 +18,16 @@
 
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/message"
             android:layout_width="305dp"
             android:layout_height="52dp"
             android:ems="10"
-            android:hint="enter message here"
+            android:autofillHints="enter message here"
             android:inputType="textPersonName"
             android:textAlignment="center"
             android:textSize="30dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.0dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,11 +37,11 @@
             android:layout_height="51dp"
             android:layout_marginBottom="92dp"
             android:text="send"
-            android:textSize="20dp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.996"
-            app:layout_constraintStart_toStartOf="@+id/editText"
+            app:layout_constraintStart_toStartOf="@+id/message"
             android:onClick="sendMessage"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
