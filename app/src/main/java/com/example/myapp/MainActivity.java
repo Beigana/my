@@ -3,53 +3,33 @@ package com.example.myapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+  Button btn;
+  public static final  long SLEEP_TIME_OUT=3000;
     @Override
-    // \thsi sis a lifecycle method
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-    }
-
-    public void sendMessage(View View) {
-        EditText message =findViewById(R.id.message);
-        Toast.makeText(this, "sending message" + message.getText().toString(),
-                Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
-        intent.putExtra("MESSAGE", message.getText().toString());
-        startActivity(intent);
-        message.setText("");
-    }
-
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        switch (item.getItemId()) {
-            case R.id.fore:
-
-                Intent intent = new Intent(MainActivity.this,
-                        active1.class);
+        btn= (Button)findViewById(R.id.button);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,Main3Activity.class);
                 startActivity(intent);
-                return true;
+            }
+        });
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
 
-            case R.id.bac:
 
-                Intent i = new Intent(MainActivity.this,
-                        active2.class);
-                startActivity(i);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
+            }
+
+        },SLEEP_TIME_OUT);
     }
 }
