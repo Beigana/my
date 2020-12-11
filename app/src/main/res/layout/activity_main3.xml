@@ -49,8 +49,19 @@
         android:id="@+id/playbutton"
         android:layout_width="276dp"
         android:layout_height="125dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="264dp"
         android:text="play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/stopbutton"
+        android:layout_width="276dp"
+        android:layout_height="125dp"
+        android:layout_marginBottom="108dp"
+        android:text="stop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.422"
